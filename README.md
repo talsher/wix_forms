@@ -1,15 +1,16 @@
-steps to install:
+# wix_forms
+## steps to deploy project:
+### dependencies
+- host os must be unix based
+- docker must be install (with version supports docker-compose)
+- port 80 must be avaliable
+### deploy
+- premit setup.sh to be execute (chmod +x)
+- run ./setup from the project main folder
+### remove
+- premit remove.sh to be execute (chmod +x)
+- run ./remove.sh from the project main folder
+## run backend unitests
+- premit backend/run_unitests.sh to be execute (chmod +x)
+- run ./run_unitests.sh from the backend folder
 
-1. install docker
-2. run mongo container "docker run --name mongodb -p 27017:27017 -d mongo:latest"
-3. connect to container and run mongo to login console
-   use wix_forms
-4. create collections: counters, forms
-   db.createCollection("...")
-5. add to counters collection counters for forms and formSubmissions
-   db.counters.insert({\_id:"formId", count: 0})
-
-TODO:
-
-- add docker diploy
-- edit readme
