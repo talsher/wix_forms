@@ -1,9 +1,10 @@
 # wix_forms
-## steps to deploy project:
+## steps to deploy project
 ### dependencies
 - host os must be unix based
 - docker must be install (with version supports docker-compose)
 - port 80 must be avaliable
+- all scripts must run with root user or user under group "docker"
 ### deploy
 - premit setup.sh to be execute (chmod +x)
 - run ./setup from the project main folder
