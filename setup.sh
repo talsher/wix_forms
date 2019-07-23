@@ -7,12 +7,10 @@ sudo docker image build --no-cache --tag wix_node_server:latest docker/nodejs/
 rm -rf docker/nodejs/backend
 
 # build nginx image
-cd frontend
-npm run-script build
-cd ..
-cp -rf frontend/build docker/nginx
+cp -rf frontend docker/nginx
 sudo docker image build --no-cache --tag wix_nginx_server:latest docker/nginx/
+rm -rf docker/nginx/frontend
 
-# install mongodb
+# deploy stack
 docker swarm init
 docker stack deploy -c wix_form_compose.yml wix_forms
